@@ -1,0 +1,33 @@
+{
+  "version": "0.1.0",
+  "name": "myproject",
+  "instructions": [
+    {
+      "name": "Initialize",
+      "accounts": [],
+      "args": [],
+      "discriminant": {
+        "type": "u8",
+        "value": 0
+      }
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Account",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "somePubkey",
+            "type": "publicKey"
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "origin": "shank",
+    "address": "2NCpU9nsgLfhqKX5CDVz24FfsZ8aRwjgUWtFbPsVZVu2"
+  }
+}
