@@ -38,12 +38,12 @@ pub fn create_pda_account<const N: usize>(
             account: new_pda_account,
             space: space as u64,
         }
-        .invoke_signed(&signers)?;
+        .invoke_signed(&signers[..])?;
         Assign {
             account: new_pda_account,
             owner,
         }
-        .invoke_signed(&signers)
+        .invoke_signed(&signers[..])
     } else {
         CreateAccount {
             from: payer,
@@ -52,6 +52,6 @@ pub fn create_pda_account<const N: usize>(
             space: space as u64,
             owner,
         }
-        .invoke_signed(&signers)
+        .invoke_signed(&signers[..])
     }
 }
